@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello from Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pokemon.css') }}">
+</head>
+<body class="pokemon-theme">
+    {% if pokemon %}
+        <div class="pokemon-container">
+            <!-- <img id="background" src="../static/pokebola.jpg" alt="Pokebolas"/> -->
+            <h1 class="pokemon-name">{{ pokemon.name }} (#{{ pokemon.number }})</h1>
+            <img id="img-pokemon" src="{{ pokemon.img }}" alt="Imagem do {{pokemon.name}}"/>
+            <h2 class="pokemon-description">{{ pokemon.description }}</h2>
+            <p class="pokemon-types"><b>Types:</b>
+              {% for type in pokemon.types %}
+              {{ type -}}
+              {% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </p>
+        </div>
+    {% else %}
+        <h1>Pokemon not found!</h1>
+    {% endif %}
+</body>
+</html>

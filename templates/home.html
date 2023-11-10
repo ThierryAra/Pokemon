@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body class="pokemon-theme">
+    <h1 class="pokemon-title">Write a Pokemon name:</h1>
+    
+    <div class="form-container">
+        <input type="text" name="name" placeholder="Digite o nome" class="pokemon-input">
+        <button type="submit" onclick="updateAction()" class="pokemon-button">Enviar</button>
+    </div>
+    
+    <script>
+        function updateAction() {
+            var valueInput = document.getElementsByTagName("input")[0];
+            window.location.href = "/pokedex/" + valueInput.value;
+        }
+    </script>
+</body>
+</html>

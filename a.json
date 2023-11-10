@@ -1,0 +1,6 @@
+{   
+    "pokemon": {
+        "number": "0376", "img": "https://img.pokemondb.net/artwork/metagross.jpg", "name": "METAGROSS", "desc": "Metagross is a Steel/Psychic type Pokémon introduced in Generation 3."
+    },
+    "types": [{"name": "PSYCHIC"}, {"name": "STEEL"}]
+}
